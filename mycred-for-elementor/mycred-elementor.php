@@ -2,9 +2,10 @@
 /**
  * Plugin Name: myCred for Elementor
  * Description: Adds all myCRED shortcodes to Elementor.
- * Version: 1.2.7
+ * Version: 1.2.8
  * Requires at least: 4.8
- * Tested up to: 6.6
+ * Tested up to: 6.7.1
+ * Requires Plugins: mycred
  * Author: myCRED
  * Author URI: https://www.mycred.me/
  */
@@ -14,7 +15,7 @@ if (!defined('ABSPATH')) {
 }
 
 define('mycred_elementor_SLUG',    'mycred-elementor');
-define('mycred_elementor_VERSION', '1.2.7');
+define('mycred_elementor_VERSION', '1.2.8');
 define( 'mycred_elementor', __FILE__ );
 /**
  * Main Elementor Test Extension Class
@@ -32,7 +33,7 @@ final class MyCred_Elementor {
      *
      * @var string The plugin version.
      */
-    const VERSION = '1.2.7';
+    const VERSION = '1.2.8';
 
     /**
      * Minimum Elementor Version
@@ -95,6 +96,14 @@ final class MyCred_Elementor {
 
         add_action('init', [$this, 'i18n']);
         add_action('plugins_loaded', [$this, 'init']);
+       
+        add_action('admin_notices', array( $this, 'mycred_elementor_addon_notice') );
+    }
+
+    public function mycred_elementor_addon_notice() {
+
+        echo '<div class="notice notice-error is-dismissible"><p>myCred Elementor requires myCred v2.5 or a greater version.</p></div>';
+
     }
 
     /**
@@ -379,3 +388,31 @@ final class MyCred_Elementor {
 }
 
 MyCred_Elementor::instance();
+
+add_action( 'admin_notices', 'mycred_elementor_merge_notice' );
+
+if ( ! function_exists( 'mycred_elementor_merge_notice' ) ) :
+    function mycred_elementor_merge_notice() {
+
+        echo wp_kses_post( '<div class="notice notice-error is-dismissible"><p><strong>myCred Elementor</strong> has been merged into myCred Core. You can access it, along with all future updates, in the myCred Core.</p></div>' );
+
+    }
+endif;
+
+ register_activation_hook(__FILE__,  'mycred_elementor_activate' );
+
+ function mycred_elementor_activate() {
+
+        deactivate_plugins(plugin_basename(__FILE__));
+
+        // Stop activation with wp_die
+        wp_die(
+            '<p><strong>myCred Elementor</strong> has been merged into myCred Core. You can access it, along with all future updates, in the myCred Core.</p>',
+            'Plugin Activation Error',
+            array( 
+                'link_url' => add_query_arg( array( 'page' => 'mycred-main' ), admin_url( 'admin.php' ) ),
+                'link_text' => 'Go to myCred Settings'
+            )
+        );
+
+    }
