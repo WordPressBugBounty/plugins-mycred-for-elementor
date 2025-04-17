@@ -2,15 +2,15 @@
 Contributors: mycred, wpexpertsio
 Tags: elementor, elementor addon, elementor widget, elements, page builder
 Requires at least: 4.8
-Tested up to: 6.7.1
-Stable tag: 1.2.8
+Tested up to: 6.8
+Stable tag: 1.2.9
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-**Important Notice: The myCred Elementor plugin has been included in the myCred Core plugin. We are deprecating it from WordPress.org, and it will no longer be updated. You can now access myCred Elementor along with all future updates in the myCred Built-in Addons.**
+📢 🚨 **Important Notice: The myCred Elementor is now part of [myCred](https://wordpress.org/plugins/mycred/) Core plugin and will no longer receive updates here. Only security fixes will be provided.**
 
 Elementor with myCred plugin converts myCred shortcodes into Elements of Elementor. There are 34 myCred Elements supported in this addon which helps admin to drag and drop each Element according to their requirement.
 
@@ -60,6 +60,9 @@ For more information visit our **[Documentation Page](https://www.mycred.me/stor
 4. If successful, click Activate Plugin to activate it and you are ready to go.
 
 == Changelog ==
+
+= 1.2.9 =
+TWEAK – Compatible with WordPress Version 6.8.
 
 = 1.2.8 =
 NEW – Added depreciation notice for existing users
