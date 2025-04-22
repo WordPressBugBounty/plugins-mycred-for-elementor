@@ -69,7 +69,7 @@ class Widget_Mycred_Total_Balance extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
                 'content_section', [
@@ -222,7 +222,7 @@ class Widget_Mycred_Total_Pts extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
                 'content_section', [
@@ -375,7 +375,7 @@ class Widget_Mycred_History extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $time = array(
             __('Show All', 'mycred_elem') => '',
@@ -610,7 +610,7 @@ class Widget_Mycred_Total_Since extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
                 'content_section', [
@@ -784,7 +784,7 @@ class Widget_Mycred_Leaderboard extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
                 'content_section', [
@@ -1038,7 +1038,7 @@ class Widget_Mycred_Best_User extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
                 'content_section', [
@@ -1240,7 +1240,7 @@ class Widget_Mycred_Exchange extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
                 'content_section', [
@@ -1410,7 +1410,7 @@ class Widget_Mycred_Link extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
                 'content_section', [
@@ -1669,7 +1669,7 @@ class Widget_Mycred_Give extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
                 'content_section', [
@@ -1855,7 +1855,7 @@ class Widget_Mycred_Affiliate_Id extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
                 'content_section', [
@@ -1969,7 +1969,7 @@ class Widget_Mycred_Affiliate_Link extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
                 'content_section', [
@@ -2094,7 +2094,7 @@ class Widget_Mycred_Hook_Table extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
                 'content_section', [
@@ -2282,7 +2282,7 @@ class Widget_Mycred_My_Balance extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
                 'content_section', [
@@ -2474,7 +2474,7 @@ class Widget_Mycred_Video extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $logics = array(
             __('Play - Award points as soon as video starts playing', 'mycred_vc') => 'play',

@@ -69,7 +69,7 @@ class Widget_Mycred_My_Rank extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
                 'content_section', [
@@ -250,7 +250,7 @@ class Widget_Mycred_My_Ranks extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
                 'content_section', [
@@ -419,7 +419,7 @@ class Widget_Mycred_Users_Of_Rank extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
                 'content_section', [
@@ -627,7 +627,7 @@ class Widget_Mycred_Users_Of_All_Ranks extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
                 'content_section', [
@@ -825,7 +825,7 @@ class Widget_Mycred_List_Ranks extends \Elementor\Widget_Base {
      * @since 1.0.0
      * @access protected
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
                 'content_section', [
